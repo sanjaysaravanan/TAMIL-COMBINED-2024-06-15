@@ -1,0 +1,164 @@
+
+Topics:
+
+  FSD ( Full Stack Development ) Demo:
+
+    Social Media Application
+
+      Users should be able to sign-up
+
+      Users can login and see the posts that are public
+
+      Users can also post to the social media app
+
+      Users can edit/delete their posts
+
+      Users should be able to edit the profile
+
+      DB Design:
+
+        the data that is involved along with datatype in the application
+
+        User Profile: ( collection - users)
+
+          name - string
+          email - string
+          image - string / later we will see file upload
+          dob - date
+          description - string
+          id - system generated ( use uuid )
+        
+        Posts:
+
+          userName - string
+          image - string
+          caption - string
+          likes - number
+        
+        Followers: (relational)
+
+        Save a post particular to user:
+
+      FE:
+
+        Home - /
+        Our Profile - /me ( Edit Option to Edit the Profile )
+        Others Profile - /<user-id>
+        My Posts - /my-posts ( show all the posts of the current user )
+                  User can edit/delete a particular post
+
+      
+      BE:
+
+        /users
+
+          POST - Creating a new user
+        
+          /<user-id>
+            PUT - Editing a user
+            GET - Get a user 
+        
+        /posts
+
+          GET - Get all the posts except the posts from the user logged in
+
+          POST - Create a new post
+
+          /<post-id>
+            PUT - Edit a post
+            GET - Get a post
+            DELETE - Delete a post
+
+    
+    Front-End:
+
+        Home - /
+        Our Profile - /me ( Edit Option to Edit the Profile )
+        Others Profile - /<user-id>
+        My Posts - /my-posts ( show all the posts of the current user )
+                  User can edit/delete a particular post
+
+        /login
+        /register
+
+      Create and finish the Front-End with Nice UI
+
+        packages:
+          react-router-dom
+          react
+          react-dom
+          axios
+          redux if needed
+          
+      Layout:
+
+        set the basic theme and typography
+
+          Theme:
+            color palletes
+          
+          typography:
+            basic font-family, font-size
+
+        header
+        sidebar
+
+        content
+
+        footer
+
+    
+    Backend:
+
+      Package:
+
+        express
+        cors
+        mongoose
+
+
+        
+
+  1. Login & register
+  2. FE:
+
+      Form to Create a new Post - Done
+
+     API:
+
+      API for creating a new post - ToDo
+    
+    Page to See others Profile - ToDo
+  
+  3. Loader
+
+  4. Alert/Notification
+
+  5. Likes - Do as a task
+
+      /like-a-post/:postId
+
+      post --> increment like
+
+      take the email of the user who is liking, go to his data 
+      set a new field likedPosts [<post-id>, <post-id>, <post-id>]
+  6. Individual Profile Visit:
+      FE page: /users/:userId
+
+        when You visit this page trigger an API /users/:userId
+        which will give the info of the particular user 
+
+      show details in the FE
+  
+  7. to remove the pushed scm file or folder,
+
+    Backup the folder/files if needed later before running the cmds,
+    
+    Folder:
+      git rm -r node_modules
+
+    File:
+      git rm .env
+
+More Idea:
+  Following a profile
